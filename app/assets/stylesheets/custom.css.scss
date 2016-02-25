@@ -1,0 +1,74 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// img{
+//   width: 100px;
+//   margin-top: 60px;
+// }
+
+$grey: #555;
+$light_grey: #777;
+$lighter_grey: #eaeaea;
+$basically_black: #222;
+
+
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  // text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+// New here? Sign up now!
+#new-here{
+  font-size: 12px;
+  padding-top: 10px;
+  a{
+    font-weight: bolder;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  padding-right: 10px;
+  border-top: 1px solid $lighter_grey;
+  color:$light_grey;
+
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $basically_black;
+    }
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+  }
+  li {
+    float: left;
+    margin-left: 15px;
+  }
+
+}
