@@ -1,4 +1,33 @@
-<div id="signup-header">
-  <h1>Sign up</h1>
+<% provide(:title, "Sign up") %>
+
+
+
+<div class= "row signup-form">
+
+  <div class="col-md-4 col-md-offset-2">
+    <div id="signup-header">
+      <h1>Sign up with us, we'll only spam you</h1>
+    </div>
+    <%= form_for @user do |f| %>
+      <%= render 'shared/error_messages' %>
+      <div>
+        <%= f.text_field :first_name, placeholder: "First Name" %>
+      </div>
+      <div>
+        <%= f.text_field :last_name, placeholder: "Last Name"%>
+      </div>
+      <div>
+        <%= f.text_field :email, placeholder: "Email"%>
+      </div>
+      <div>
+        <%= f.password_field :password, placeholder: "Password" %>
+      </div>
+      <div>
+        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+      </div>
+
+      <%= f.submit "Sign Up", class: "btn btn-primary"%>
+    <% end %>
+
+  </div>
 </div>
-<p>Sign up using your email</p>

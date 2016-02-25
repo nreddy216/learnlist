@@ -21,6 +21,11 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test "first name should be present 2" do
+    @user.first_name = "Alex"
+    assert @user.valid?
+  end
+
   test "email should not be too long" do
     # 255 is the max that a DB can store
     @user.email = "h" * 256

@@ -11,6 +11,67 @@ $grey: #555;
 $light_grey: #777;
 $lighter_grey: #eaeaea;
 $basically_black: #222;
+$bright_redpink: #f95a4c;
+$orangey_redpink: #f61;
+
+
+//errors
+
+#error-explanation{
+  color: $bright_redpink;
+  ul{
+    color: $bright_redpink;
+    margin: 0 0 30px 0;
+  }
+}
+
+
+// for the debugger and forms
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// for the debugger - only for me
+.debug_dump{
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+// Forms
+
+.signup-form{
+  margin: 0 auto;
+}
+
+input, textarea, select{
+  border: 1px solid #ccc;
+  width: 80%;
+  margin-bottom: 15px;
+  @include box_sizing;
+
+}
+
+.btn-primary{
+  height: 40px !important;
+  border-radius: 2px !important;
+  background-color: $bright_redpink;
+  border: 0px;
+  font-size: 20px;
+
+  &:hover{
+    background-color: $orangey_redpink;
+  }
+}
+
+input{
+  height: 30px !important;
+  border-radius: 2px;
+}
 
 
 
