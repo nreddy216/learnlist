@@ -2,6 +2,9 @@ class ItemsController < ApplicationController
   #user must be logged in to create or destroy a list item
   before_action :current_user, only: [:create, :destroy]
 
+
+
+
   def create
 
     @item = current_user.lists.items.create(item_params)

@@ -29,4 +29,7 @@ Rails.application.routes.draw do
   post '/items', to: 'items#create'
   delete '/items', to: 'items#destroy'
 
+
+  get "/fetch_items", to: 'items#from_lists', as: 'fetch_items' 
+
 end

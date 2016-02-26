@@ -15,4 +15,4 @@ tom = User.find(3)
 tomlist = tom.lists.create(title: "Is this working?")
 tom.lists.create(title: "Second post")
 
-tomlist.items.create(description: "First item for Tom")
+tomlist.items.create(description: "First item for Tom", url: "https://google.com")

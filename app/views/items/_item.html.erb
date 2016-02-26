@@ -1,0 +1,15 @@
+<li href="#" >
+
+  <%#= link_to list.title, list.user, id: "list-#{list.id}", class: "list-group-item lists" -%>
+
+  <% @user.items.each do |item| %>
+
+
+    <a id="item-<%=item.id%>" class="list-group-item items" href="<%=item.url%>" target="_blank">
+      <%=item.description%><%#= link_to "x", current_user, method: :delete, data: {confirm: "Delete this list?"}, class:"badge"-%>
+    </a>
+
+  <% end %>
+
+
+</li>

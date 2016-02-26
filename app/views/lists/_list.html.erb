@@ -1,6 +1,6 @@
 <li href="#" >
 
   <%#= link_to list.title, list.user, id: "list-#{list.id}", class: "list-group-item lists" -%>
-  <a id="list-#{list.id}" class="list-group-item lists" href="#"><%=list.title%><%#= link_to "x", current_user, method: :delete, data: {confirm: "Delete this list?"}, class:"badge"-%><span class="badge"><%= current_user.items.count %></span></a>
-
+  <!-- <a id="list-#{list.id}" class="list-group-item lists" href="#"><%#=list.title%><%#= link_to "x", current_user, method: :delete, data: {confirm: "Delete this list?"}, class:"badge"-%><span class="badge"><%#= current_user.items.count %></span></a> -->
+  <%= link_to list.title, fetch_items_path(list_id: list.id), remote: true %>
 </li>

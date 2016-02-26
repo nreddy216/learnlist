@@ -21,9 +21,6 @@
 
 </div>
 
-<%= render "items/list_items" %>
-
-<% @first_list = @user.lists.first %>
-
-<h2>This is the first list items</h2>
-<%= render @first_list.items %>
+<div class="all-items container-fluid">
+  <%=render partial: 'items/item', locals:{items: @items} %>
+</div>
