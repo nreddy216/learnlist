@@ -4,8 +4,10 @@ one:
   url: MyString
   description: MyString
   thumbnail_image_url: MyString
+  list_id: 1
 
 two:
   url: MyString
   description: MyString
   thumbnail_image_url: MyString
+  list_id: 1

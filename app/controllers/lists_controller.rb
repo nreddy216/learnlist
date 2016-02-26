@@ -4,10 +4,12 @@ class ListsController < ApplicationController
 
   def create
     @list = current_user.lists.create(list_params)
-    if @list.save
-      flash[:success] = "List created!"
-      redirect_to current_user
-    end
+    # if @list.save
+    #   flash[:success] = "List created!"
+    #   redirect_to current_user
+    # end
+
+    redirect_to current_user
 
   end
 
@@ -15,7 +17,6 @@ class ListsController < ApplicationController
   def destroy
     @list = current_user.lists.find(list_params)
     @list.destroy
-    @list.save
     flash[:success] = "List deleted"
     redirect_to current_user
   end

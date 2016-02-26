@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @lists = @user.lists
     #defines the current user's list - only if logged in they can add/delete lists
     @list = @user.lists.new
-    # render :show
+    render :show
   end
 
   #sign up
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    
+
   end
 
   private
