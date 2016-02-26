@@ -109,7 +109,7 @@ textarea {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 30%;
   padding-top: 5px;
   padding-right: 10px;
   border-top: 1px solid $lighter_grey;
@@ -146,4 +146,9 @@ footer {
 
 .modal{
   position: absolute;
+}
+
+.lists{
+  width: 25%;
+
 }
