@@ -4,4 +4,12 @@
   Hi, <%= @user.first_name %>!
 </h1>
 
-<%= render "list_sidebar" %>
+<div class="col-md-8">
+  <% if @user.lists.any? %>
+    <h4>Your learnlists <%#= @user.lists.count -%></h4>
+    <div class="list-group">
+      <%= render @lists %>
+    </div>
+
+  <% end %>
+</div>

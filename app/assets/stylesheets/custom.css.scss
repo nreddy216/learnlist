@@ -109,7 +109,7 @@ textarea {
 /* footer */
 
 footer {
-  margin-top: 45px;
+  margin-top: 30%;
   padding-top: 5px;
   padding-right: 10px;
   border-top: 1px solid $lighter_grey;
@@ -148,6 +148,7 @@ footer {
   position: absolute;
 }
 
+<<<<<<< HEAD
 #navbar{
 
   float: right;
@@ -159,4 +160,8 @@ footer {
 
 .search-btn{
   margin-top: -10px;
+}
+
+.lists{
+  width: 25%;
 }
