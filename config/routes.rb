@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   delete '/sessions', to: 'sessions#destroy'
 
 
+  #lists
+  resources :lists, only: [:create, :destroy]
 
 end
