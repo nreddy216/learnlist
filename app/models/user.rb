@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
 
 # Bug with Rails 4 - not using Devise,  first name blank error
-  # validates :first_name, presence: true, length: {maximum: 50}
+  validates :first_name, presence: true, length: {maximum: 50}
 
   validates :password, presence: true, length: {minimum: 6}
 

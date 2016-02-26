@@ -34,9 +34,16 @@
               <li><%= link_to "Sign in", '#', {:remote => true, 'data-toggle':"modal", 'data-target':'.signin'} %></li>
             <% else %>
               <li class=""><%= link_to "My Lists", "/users/#{current_user.id}", method: :get %></li>
-              <li><%= link_to "Home",   root_path %></li>
+              <<li><%= link_to "Help",   help_path %></li>
               <li class=""><%= link_to "Logout", '/sessions', method: :delete %></li>
-            
+              <ul class="nav navbar-nav navbar-right">
+                <form class="navbar-form navbar-left" role="search">
+                  <div class="form-group search">
+                    <input type="text" class="form-control" placeholder="Search">
+                      <button type="submit" class="btn search-btn">	&#128269;</button>
+                  </div>
+                </form>
+              </ul>
             <% end %>
           </ul>
         </ul>
