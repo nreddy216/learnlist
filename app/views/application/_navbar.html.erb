@@ -6,8 +6,19 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Home",   root_path %></li>
           <li><%= link_to "Help",   help_path %></li>
-          <li><%= link_to "Log in", '#' %></li>
+          <li><%#= link_to "Log in", '', {:remote => true, 'data-toggle':"modal", 'data-target':'#signin'} -%></li>
         </ul>
       </nav>
     </div>
   </header>
+
+  <!-- Small modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        HELLO
+      </div>
+    </div>
+  </div>

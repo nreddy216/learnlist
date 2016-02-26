@@ -21,7 +21,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-  test "first name should be present 2" do
+  test "first name should be present when there IS a name" do
     @user.first_name = "Alex"
     assert @user.valid?
   end

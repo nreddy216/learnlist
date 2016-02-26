@@ -9,10 +9,12 @@
       The form contains <%= pluralize(@user.errors.count, "error")%>
     </div>
     <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li>
-          <%= message %>
-        </li>
+      <% if @user.errors.full_messages.any? %>
+        <% @user.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>
