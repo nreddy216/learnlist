@@ -10,5 +10,9 @@ tom = User.find(3)
 
 #use Faker:: gem another time....
 
-tom.lists.create(title: "Is this working?")
+
+
+tomlist = tom.lists.create(title: "Is this working?")
 tom.lists.create(title: "Second post")
+
+tomlist.items.create(description: "First item for Tom")

@@ -9,8 +9,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @lists = @user.lists
+    @items = @user.items
+
     #defines the current user's list - only if logged in they can add/delete lists
     @list = @user.lists.new
+    @item = @user.items.new
+
     render :show
   end
 

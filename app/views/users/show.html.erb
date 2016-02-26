@@ -11,11 +11,19 @@
   <% if @user.lists.any? %>
     <div class="list-group">
       <h4>Your learnlists <%#= @user.lists.count -%></h4>
-      <%= render @lists %>
+      <%= render @user.lists %>
     </div>
 
   <% end %>
 
   <%=render 'shared/list_add' %>
 
+
 </div>
+
+<%= render "items/list_items" %>
+
+<% @first_list = @user.lists.first %>
+
+<h2>This is the first list items</h2>
+<%= render @first_list.items %>

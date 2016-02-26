@@ -4,6 +4,9 @@ class ListsController < ApplicationController
 
   def create
     @list = current_user.lists.create(list_params)
+
+    #TESTING THIS
+    # @items = current_user.lists.items.create(list_params)
     # if @list.save
     #   flash[:success] = "List created!"
     #   redirect_to current_user
