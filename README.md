@@ -1,28 +1,30 @@
-== README
+#LEARNLIST README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Overview
 
-Things you may want to cover:
+Learnlist is an application that allows you to store all of your
+online learning resources in one place.  Its design is based off
+music listening apps with customized, user-created playlists, except
+its focus is on learning and finding the best resources out there.
 
-* Ruby version
+##Technologies
 
-* System dependencies
+* Ruby, using a Rails framework
+* bcrypt gem for password protection
+* Postgresql for running a database
+* ActiveRecord for database manipulation
+* JavaScript & jQuery for front-end interaction
+* HTML/CSS & ERB
+* Balsamiq for wireframing
 
-* Configuration
+##Mockup and Sitemap
 
-* Database creation
+![Wireframe of Learnlist Dashboard](./app/assets/images/README/Learnlist_Dashboard_Mockup.png)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a preliminary wireframe of the Learnlist User Dashboard. Users will be able to create lists, add links, rate the
+resources, and search for other resources that their fellow learners post.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+![Sitemap of Learnlist](./app/assets/images/README/Learnlist_Sitemap.png)
+
+This is a view of the MVP sitemap. In order to use the application, you must be logged in.

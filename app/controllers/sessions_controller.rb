@@ -13,18 +13,18 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-      redirect_to "/users/#{@user.id}"
+      render "users/#{@user.id}"
     else
       #flash now specifically designed for displaying flash messages on
       #rendered pages
-      flash.now[:danger] = 'Invalid email/password combination!'
-      redirect_to "/"
+      # flash.now[:danger] = 'Invalid email/password combination!'
+      redirect_to '/'
     end
   end
 
   def destroy
     logout
-    redirect_to "/signin"
+    redirect_to root_path
   end
 
 end
