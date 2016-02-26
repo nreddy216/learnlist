@@ -1,14 +1,18 @@
-<h1>Sign In</h1>
 
-<%= form_for User.new, url: "/sessions", method: "post" do |f| %>
+<div class="sign-in-form">
 
-  <div>
-    <%= f.text_field :email, placeholder: "Email" %>
-  </div>
-  <div>
-    <%= f.password_field :password, placeholder: "Password" %>
-  </div>
+  <%= form_for User.new, method: "post" do |f| %>
+  <h5 class="sign-in-title">"Education is the kindling of a flame, not the filling of a vessel" - Socrates</h5>
 
-  <%= f.submit "Sign In" %>
+    <div>
+      <%= f.text_field :email, placeholder: "Email" %>
+    </div>
+    <div>
+      <%= f.password_field :password, placeholder: "Password" %>
+    </div>
 
-<% end %>
+    <%= f.submit "Sign In" %>
+
+  <% end %>
+
+</div>
