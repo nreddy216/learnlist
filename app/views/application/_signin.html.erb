@@ -1,11 +1,11 @@
 
 <div class="sign-in-form">
 
-  <%#= form_for User.new, method: "post" do |f| -%>
 
   <h5 class="sign-in-title">"Education is the kindling of a flame, not the filling of a vessel" - Socrates</h5>
-  <%#= form_for(:session, url: sessions_path) do |f| -%>
-  <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+
+  <!-- NOT SURE WHY @user isn't working but User.new is??  -->
+  <%= form_for User.new, url: "/sessions", method: "post" do |f| %>
     <%#= render "shared/flash_notice_signin" -%>
     <div>
       <%= f.label :email %>

@@ -10,6 +10,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  #form for issue
+  def home
+    @home_page = true
+    @user = User.new
+  end
+
   def self.confirm(params)
     @user = User.find_by({email: params[:email]})
     @user.try(:authenticate, params[:password])

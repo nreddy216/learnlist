@@ -32,4 +32,9 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:first_name, :email, :password, :password_confirmation)
   end
+
+
+  # TEST
+  include ApplicationHelper
+
 end

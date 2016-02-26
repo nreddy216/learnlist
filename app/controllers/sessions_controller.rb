@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-      render "users/#{@user.id}"
+      redirect_to @user
     else
       #flash now specifically designed for displaying flash messages on
       #rendered pages
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to root_path
+    redirect_to '/'
   end
 
 end

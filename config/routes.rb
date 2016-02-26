@@ -16,8 +16,7 @@ Rails.application.routes.draw do
   #sessions
   get '/sessions', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
-
+  delete '/sessions', to: 'sessions#destroy'
 
 
 
