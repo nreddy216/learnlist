@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
 
   #lists
-  resources :lists, only: [:create, :destroy]
+  # resources :lists, only: [:create, :destroy]
+  post '/lists', to: 'lists#create'
+  delete '/lists', to: 'lists#destroy'
 
 end

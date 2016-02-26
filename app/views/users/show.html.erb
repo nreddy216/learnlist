@@ -1,15 +1,21 @@
 <% provide(:title, @user.first_name) %>
 
-<h1>
-  Hi, <%= @user.first_name %>!
-</h1>
+<div class="hi-user-header">
+  <h1>
+    Hi, <%= @user.first_name %>!
+  </h1>
+</div>
+
 
 <div class="col-md-8">
   <% if @user.lists.any? %>
-    <h4>Your learnlists <%#= @user.lists.count -%></h4>
     <div class="list-group">
+      <h4>Your learnlists <%#= @user.lists.count -%></h4>
       <%= render @lists %>
     </div>
 
   <% end %>
+
+  <%=render 'shared/list_add' %>
+
 </div>

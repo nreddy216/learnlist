@@ -1,0 +1,9 @@
+<%= form_for(@list) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="add-list">
+    <div class="field">
+      <%= f.text_area :title, placeholder: "List title: " %>
+    </div>
+    <%= f.submit "Add", class: "btn btn-default" %>
+  </div>
+<% end %>

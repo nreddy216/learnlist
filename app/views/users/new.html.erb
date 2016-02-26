@@ -8,8 +8,9 @@
     <div id="signup-header">
       <h1>Sign up with us, we'll only spam you</h1>
     </div>
-    <%= render 'shared/error_messages' %>
+
     <%= form_for @user do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
       <div>
         <%= f.text_field :first_name, placeholder: "First Name" %>
       </div>

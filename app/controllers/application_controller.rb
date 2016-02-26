@@ -21,14 +21,14 @@ class ApplicationController < ActionController::Base
     @user.try(:authenticate, params[:password])
   end
 
-  # makes sure that user is logged in
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
+  # # makes sure that user is logged in
+    # def logged_in_user
+    #   unless logged_in?
+    #     #store_location #look into this - how does it store location?
+    #     flash[:danger] = "Please log in."
+    #     redirect_to '/'
+    #   end
+    # end
 
   include SessionsHelper
 

@@ -9,7 +9,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @lists = @user.lists
-    render :show
+    #defines the current user's list - only if logged in they can add/delete lists
+    @list = @user.lists.new
+    # render :show
   end
 
   #sign up
@@ -28,6 +30,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    
+  end
+
   private
 
   def user_params
@@ -36,6 +42,6 @@ class UsersController < ApplicationController
 
 
   # TEST
-  include ApplicationHelper
+  #include ApplicationHelper
 
 end

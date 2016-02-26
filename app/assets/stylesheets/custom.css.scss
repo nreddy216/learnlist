@@ -163,4 +163,32 @@ footer {
 
 .lists{
   width: 25%;
+
+}
+
+.list-group{
+  margin-top: 7%;
+  list-style-type: none;
+}
+
+.hi-user-header{
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: asset-data-url("abstract-mosaic-bg.png");
+
+  h1{
+    color: white;
+    margin-left: 20px;
+  }
+}
+
+.add-list{
+  width: 31%;
+  .btn{
+    background: $lighter_grey;
+    &:hover{
+      background: $light_grey;
+    }
+  }
 }
