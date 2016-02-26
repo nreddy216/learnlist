@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :lists
+  has_many :lists, dependent: :destroy
 
   #using bcrypt
   has_secure_password

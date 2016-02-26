@@ -4,3 +4,11 @@ User.create(first_name: "Tom", last_name: "Jones", email: "tomjones@gmail.com", 
 User.create(first_name: "Dan", last_name: "Jones", email: "danjones@gmail.com", password:"carrots")
 User.create(first_name: "Julia", last_name: "Jones", email: "juliajones@gmail.com", password:"carrots")
 User.create(first_name: "Mary", last_name: "Jones", email: "maryjones@gmail.com", password:"carrots")
+
+
+tom = User.find(3)
+
+#use Faker:: gem another time....
+
+tom.lists.create(title: "Is this working?")
+tom.lists.create(title: "Second post")

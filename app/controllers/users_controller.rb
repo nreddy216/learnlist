@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   #main user dashboard page
   def show
     @user = User.find(params[:id])
+    @lists = @user.lists
     render :show
   end
 

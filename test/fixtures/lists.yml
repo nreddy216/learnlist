@@ -1,9 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  user_id: 
+  title: "second post"
+  created_at: <%= 10.minutes.ago %>
+  user_id:
 
 two:
-  title: MyString
-  user_id: 
+  title: "fourth post"
+  created_at: <%= 10.years.ago %>
+  user_id:
+
+three:
+  title: "third post"
+  created_at: <%= 10.hours.ago %>
+  user_id:
+
+
+most_recent:
+  title: "test for recent"
+  created_at: <%= Time.zone.now %>
+  user_id:
