@@ -8,12 +8,12 @@ class UsersController < ApplicationController
   #main user dashboard page
   def show
     @user = User.find(params[:id])
-    # @lists = @user.lists
-    # @items = @user.items
+    @lists = @user.lists
+    @items = @user.items
 
     #FOR CLICK JQUERY THING
-    @items = Item.all
-    @lists = List.all
+    # @items = Item.all
+    # @lists = List.all
 
     #defines the current user's list - only if logged in they can add/delete lists
     @list = @user.lists.new
